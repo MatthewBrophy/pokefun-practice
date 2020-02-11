@@ -27,12 +27,7 @@ class App extends React.Component {
   };
 
   handleChange = e => {
-    console.log(e.target.value);
-    this.setState({
-      pokemons: this.state.pokemonsStorage.filter(pokemon =>
-        pokemon.name.includes(e.target.value)
-      )
-    });
+    //filter your pokemon!
   };
 
   render() {
