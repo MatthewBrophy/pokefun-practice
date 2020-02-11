@@ -2,39 +2,30 @@ import React from "react";
 import PokemonDisplay from "./containers/PokemonDisplay";
 import Search from "./components/Search";
 
+const API = "https://pokeapi.co/api/v2/pokemon";
+
 class App extends React.Component {
   constructor() {
     super();
-    this.state = {
-      pokemonsStorage: [],
-      pokemons: []
-    };
+    this.state = {};
   }
 
-  componentDidMount() {
-    this.getPokemon();
-  }
+  componentDidMount() {}
 
   getPokemon = () => {
-    fetch("https://pokeapi.co/api/v2/pokemon/")
-      .then(res => res.json())
-      .then(response =>
-        this.setState({
-          pokemonsStorage: response.results,
-          pokemons: response.results
-        })
-      );
+    //fetch your Pokemon and store them in state
   };
 
   handleChange = e => {
+    console.log(e);
     //filter your pokemon!
   };
 
   render() {
     return (
       <div className="app">
-        <Search handleChange={this.handleChange} />
-        <PokemonDisplay pokemons={this.state.pokemons} />
+        <Search />
+        <PokemonDisplay />
       </div>
     );
   }

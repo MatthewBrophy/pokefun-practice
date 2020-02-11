@@ -5,9 +5,7 @@ class PokemonDisplay extends Component {
   render() {
     return (
       <div>
-        {this.props.pokemons.map((pokemon, i) => (
-          <Pokemon pokemon={pokemon} key={i} />
-        ))}
+        {/*iterate over the pokemon and build a <Pokemon> component for each one*/}
       </div>
     );
   }
